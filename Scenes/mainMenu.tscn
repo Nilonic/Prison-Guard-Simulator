@@ -1,0 +1,236 @@
+[gd_scene load_steps=4 format=3 uid="uid://bkdpsldl2t366"]
+
+[ext_resource type="Script" path="res://Scripts/mainMenu.gd" id="1_1idac"]
+[ext_resource type="Texture2D" uid="uid://dgbtvny2e4gi3" path="res://Assets/black_32x32.png" id="2_6trit"]
+[ext_resource type="Texture2D" uid="uid://cw4pq165gdgdy" path="res://Assets/uh_53x53.png" id="2_t0vn7"]
+
+[node name="MainMenu" type="Node2D"]
+editor_description = "the main menu node"
+script = ExtResource("1_1idac")
+
+[node name="BackgroundDrawer" type="CanvasGroup" parent="."]
+
+[node name="Uh53x53" type="Sprite2D" parent="BackgroundDrawer"]
+position = Vector2(574.5, 321.5)
+scale = Vector2(21.8679, 12.2075)
+texture = ExtResource("2_t0vn7")
+
+[node name="Black32x32" type="Sprite2D" parent="BackgroundDrawer"]
+position = Vector2(575.75, 627.75)
+scale = Vector2(32.9286, 1.18571)
+texture = ExtResource("2_6trit")
+
+[node name="Black32x33" type="Sprite2D" parent="BackgroundDrawer"]
+position = Vector2(575.75, 20.25)
+scale = Vector2(32.9286, 1.12857)
+texture = ExtResource("2_6trit")
+
+[node name="version" type="RichTextLabel" parent="BackgroundDrawer"]
+clip_contents = false
+offset_left = 2.0
+offset_top = 19.0
+offset_right = 330.0
+offset_bottom = 45.0
+text = "V0.0.0"
+
+[node name="gameTitle" type="RichTextLabel" parent="BackgroundDrawer"]
+z_as_relative = false
+clip_contents = false
+offset_right = 763.0
+offset_bottom = 22.0
+text = "Prsion Guard Simulator"
+scroll_active = false
+
+[node name="updateText" type="RichTextLabel" parent="BackgroundDrawer"]
+clip_contents = false
+offset_left = 3.0
+offset_top = 611.0
+offset_right = 493.0
+offset_bottom = 651.0
+theme_override_font_sizes/normal_font_size = 23
+text = "lorem ipsum. update avalable/up to date"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="BackgroundDrawer"]
+offset_left = 814.0
+offset_right = 1152.0
+offset_bottom = 40.0
+text = "made by nilonic: https://nilonic.itch.io/pgs"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="BackgroundDrawer"]
+offset_top = 40.0
+offset_right = 1150.0
+offset_bottom = 244.0
+text = "an Erotic Text-based game, based off of Broken Dreams Correctional Center, about being a prison guard in a space station prison
+
+NOTE: this game, whilst still in beta, contains a lot of suggestive themes, and is meant to be played by ADULTS ONLY. you have been warned"
+
+[node name="Options" type="CanvasGroup" parent="."]
+visible = false
+position = Vector2(836, 0)
+
+[node name="Black32x34" type="Sprite2D" parent="Options"]
+modulate = Color(1, 1, 1, 0.380392)
+position = Vector2(132.997, 123.5)
+scale = Vector2(10.5144, 7.05714)
+texture = ExtResource("2_6trit")
+
+[node name="toggleForNSFW" type="RichTextLabel" parent="Options"]
+clip_contents = false
+offset_left = -43.0
+offset_top = 51.0
+offset_right = 101.0
+offset_bottom = 77.0
+tooltip_text = "enable NSFW content, such as sex scenes.
+
+NOTE: may include non-consentual sex
+
+NOTE: not implemented"
+text = "NSFW?"
+
+[node name="obForNSFW" type="OptionButton" parent="Options"]
+offset_left = 103.0
+offset_top = 51.0
+offset_right = 312.0
+offset_bottom = 82.0
+item_count = 2
+selected = 1
+popup/item_0/text = "Yes Please! (Enabled)"
+popup/item_0/id = 0
+popup/item_0/disabled = true
+popup/item_1/text = "No Thanks (Disabled)"
+popup/item_1/id = 1
+
+[node name="toggleForGore" type="RichTextLabel" parent="Options"]
+clip_contents = false
+offset_left = -43.0
+offset_top = 88.0
+offset_right = 102.0
+offset_bottom = 114.0
+tooltip_text = "enable blood, gore, and the likes
+
+NOTE: Not Implemented"
+text = "Gore (blood, etc.)?"
+
+[node name="obForGore" type="OptionButton" parent="Options"]
+offset_left = 103.0
+offset_top = 88.0
+offset_right = 312.0
+offset_bottom = 119.0
+item_count = 2
+selected = 1
+popup/item_0/text = "Yes Please! (Enabled)"
+popup/item_0/id = 0
+popup/item_0/disabled = true
+popup/item_1/text = "No Thanks (Disabled)"
+popup/item_1/id = 1
+
+[node name="toggleForDrugUse" type="RichTextLabel" parent="Options"]
+clip_contents = false
+offset_left = -43.0
+offset_top = 125.0
+offset_right = 94.0
+offset_bottom = 151.0
+tooltip_text = "enable Drug Use, such as Hallucinogens, stimulants, antipsychotics, etc.
+
+NOTE: Not Implemented"
+text = "Drug Use?"
+
+[node name="obForDrugUse" type="OptionButton" parent="Options"]
+offset_left = 103.0
+offset_top = 125.0
+offset_right = 312.0
+offset_bottom = 156.0
+item_count = 2
+selected = 1
+popup/item_0/text = "Yes Please! (Enabled)"
+popup/item_0/id = 0
+popup/item_0/disabled = true
+popup/item_1/text = "No Thanks (Disabled)"
+popup/item_1/id = 1
+
+[node name="toggleForDifficulty" type="RichTextLabel" parent="Options"]
+clip_contents = false
+offset_left = -43.0
+offset_top = 162.0
+offset_right = 94.0
+offset_bottom = 188.0
+tooltip_text = "change difficulty
+
+Medium Difficulty is recomended for the first playthough, but it can be changed later"
+text = "Difficulty Level:"
+
+[node name="obForDifficulty" type="OptionButton" parent="Options"]
+offset_left = 103.0
+offset_top = 162.0
+offset_right = 312.0
+offset_bottom = 193.0
+item_count = 6
+selected = 2
+popup/item_0/text = "Violent"
+popup/item_0/id = 0
+popup/item_0/disabled = true
+popup/item_1/text = "Hard"
+popup/item_1/id = 1
+popup/item_1/disabled = true
+popup/item_2/text = "Medium"
+popup/item_2/id = 2
+popup/item_3/text = "Easy"
+popup/item_3/id = 3
+popup/item_3/disabled = true
+popup/item_4/text = "debugging"
+popup/item_4/id = 4
+popup/item_4/disabled = true
+popup/item_4/separator = true
+popup/item_5/text = "Debug"
+popup/item_5/id = 5
+popup/item_5/disabled = true
+
+[node name="toggleForCheats" type="RichTextLabel" parent="Options"]
+clip_contents = false
+offset_left = -43.0
+offset_top = 199.0
+offset_right = 94.0
+offset_bottom = 225.0
+tooltip_text = "Enable Cheats"
+text = "Enable Cheats:"
+
+[node name="obForCheats" type="OptionButton" parent="Options"]
+offset_left = 103.0
+offset_top = 199.0
+offset_right = 312.0
+offset_bottom = 230.0
+item_count = 2
+selected = 1
+popup/item_0/text = "Yes Please! (Enabled)"
+popup/item_0/id = 0
+popup/item_0/disabled = true
+popup/item_1/text = "No Thanks (Disabled)"
+popup/item_1/id = 1
+
+[node name="Title Screen" type="CanvasGroup" parent="."]
+editor_description = "Main Menu -> Title Screen"
+
+[node name="playButton" type="Button" parent="Title Screen"]
+offset_left = 2.0
+offset_top = 279.0
+offset_right = 127.0
+offset_bottom = 319.0
+tooltip_text = "Begin a new game. note: saving is not implemented"
+text = "New Game"
+
+[node name="loadButton" type="Button" parent="Title Screen"]
+offset_left = 2.0
+offset_top = 323.0
+offset_right = 127.0
+offset_bottom = 363.0
+tooltip_text = "Load your save *NOT IMPLEMENTED*"
+disabled = true
+text = "Load Game"
+
+[node name="exitButton" type="Button" parent="Title Screen"]
+offset_left = 2.0
+offset_top = 367.0
+offset_right = 127.0
+offset_bottom = 407.0
+tooltip_text = "Exit the game"
+text = "Exit"

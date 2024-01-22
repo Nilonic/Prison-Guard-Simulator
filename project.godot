@@ -1,0 +1,40 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Prison Guard Simulator"
+config/tags=PackedStringArray("erotic", "nsfw")
+run/main_scene="res://Scenes/mainMenu.tscn"
+config/features=PackedStringArray("4.2", "GL Compatibility")
+config/icon="res://icon.svg"
+
+[autoload]
+
+globalFunctions="*res://Scripts/globalFunctions.gd"
+
+[display]
+
+window/size/resizable=false
+mouse_cursor/custom_image="res://Assets/cursor.png"
+
+[editor]
+
+version_control/autoload_on_startup=true
+
+[filesystem]
+
+import/blender/enabled=false
+
+[rendering]
+
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
+environment/defaults/default_clear_color=Color(0.294118, 0.254902, 0.501961, 1)
