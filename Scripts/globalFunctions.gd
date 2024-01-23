@@ -44,3 +44,10 @@ func find_node_by_name(root, node_name):
 func do_level_calculation():
 	var level = GlobalVariables.xp / GlobalVariables.get_xp_per_level()
 	return level + 1
+
+
+var soundEffectPlayed = false
+
+func _ready():
+	print("initialized res://Scripts/globalFunctions.gd as \"autoload_script\"")
+
