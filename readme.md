@@ -6,7 +6,11 @@ Welcome to Prison Guard Simulator, an engaging and text-based "game". Immerse yo
 
 ## Game Concept
 
-In Prison Guard Simulator, you take on the role of a prison guard at \<nondescript prison>. Navigate through the challenges of maintaining order, interacting with inmates, and making crucial decisions that shape the course of the game.
+In Prison Guard Simulator, you take on the role of a prison guard at **nondescript prison**. Navigate through the challenges of maintaining order, interacting with inmates, and making crucial decisions that shape the course of the game.
+
+## Credits
+**[Nilonic:](https://github.com/Nilonic/)** Art, Programming
+<!--feel free to add yourself when you make a contribution-->
 
 ## Technical Details
 
@@ -29,8 +33,9 @@ If you're passionate about this project and would like to contribute, your help 
 ### How to Contribute
 
 1. **Fork the Repository:** Start by forking the [Prison Guard Simulator GitHub repository](https://github.com/nilonic/pgs) to your own account.
-2. **Make Changes:** Implement your enhancements, fixes, or features.
-3. **Submit a Pull Request:** Once you're satisfied with your changes, submit a pull request. Your contributions will be reviewed and considered for inclusion in the main project.
+2. **Read the Contributing Guidelines:** Before making changes, please read the [Contributing Guidelines](contributing.md) to familiarize yourself with the project's coding standards and other important information.
+3. **Make Changes:** Implement your enhancements, fixes, or features according to the guidelines.
+4. **Submit a Pull Request:** Once you're satisfied with your changes, submit a pull request. Your contributions will be reviewed and considered for inclusion in the main project.
 
 ## Support and Feedback
 
