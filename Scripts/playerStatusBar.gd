@@ -3,12 +3,14 @@ extends Node2D
 var playerHPBar : ProgressBar
 var playerLustBar : ProgressBar
 var playerArmourBar : ProgressBar
+var playerLevelBar: ProgressBar
 
 var root
 
 var playerHPBarText : RichTextLabel
 var playerLustBarText : RichTextLabel
 var playerArmourBarText : RichTextLabel
+var playerLevelBarText : RichTextLabel
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -21,11 +23,12 @@ func _ready():
 	playerArmourBarText = $"armourBar/armourText"
 	
 	root = get_tree().get_root()
+	playerHPBar.value = GlobalVariables.hp
+	playerLustBar.value = GlobalVariables.lust
+	playerArmourBar.value = GlobalVariables.armour
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
-	# do damage calculations here
-	globalFunctions.set_health(int(playerHPBar.value) - _delta)
 	#update text here
 	globalFunctions.update_text(root)
 	_updatePlayerStatus()

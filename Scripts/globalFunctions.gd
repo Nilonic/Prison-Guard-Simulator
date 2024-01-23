@@ -3,9 +3,10 @@
 extends Node
 
 func update_text(root: Variant):
-	find_node_by_name(root, "hpText").text = "[center]HP: " + str(find_node_by_name(root, "hpBar").value) + "/100[/center]"
+	find_node_by_name(root, "hpText").text = "[center]Pain: " + str(find_node_by_name(root, "hpBar").value) + "/100[/center]"
 	find_node_by_name(root, "lustText").text = "[center]Lust: " + str(find_node_by_name(root, "lustBar").value)  + "/100[/center]"
 	find_node_by_name(root, "armourText").text = "[center]Armour: " + str(find_node_by_name(root, "armourBar").value)  + "/100[/center]"
+	find_node_by_name(root, "levelText").text = "[center]Level: " + str(do_level_calculation()) + "[/center]"
 
 # Declare your global functions here
 func set_health(new_health:int):
@@ -40,6 +41,6 @@ func find_node_by_name(root, node_name):
 	# Node not found in the current subtree
 	return null
 
-
-func _ready():
-	print("GlobalFunctions singleton initialized")
+func do_level_calculation():
+	var level = GlobalVariables.xp / GlobalVariables.get_xp_per_level()
+	return level + 1

@@ -59,7 +59,7 @@ text = "made by nilonic: https://nilonic.itch.io/pgs"
 [node name="RichTextLabel2" type="RichTextLabel" parent="BackgroundDrawer"]
 offset_top = 40.0
 offset_right = 1150.0
-offset_bottom = 244.0
+offset_bottom = 123.0
 text = "an Erotic Text-based game, based off of Broken Dreams Correctional Center, about being a prison guard in a space station prison
 
 NOTE: this game, whilst still in beta, contains a lot of suggestive themes, and is meant to be played by ADULTS ONLY. you have been warned"
