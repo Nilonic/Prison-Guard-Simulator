@@ -21,10 +21,10 @@ In Prison Guard Simulator, you take on the role of a prison guard at **nondescri
 ## Play the Game
 
 ### Stable Version
-Explore the stable release of Prison Guard Simulator on [itch.io](https://nilonic.itch.io/pgs) for a reliable and polished gaming experience.
+Download the stable release of Prison Guard Simulator on [itch.io](https://nilonic.itch.io/pgs) for a reliable and polished gaming experience.
 
 ### Unstable Version
-For the latest features and updates, try out the unstable version on [GitHub Pages](https://nilonic.github.io/pgs). Keep in mind that this version may have experimental elements and is subject to changes.
+For the latest features and updates, you can compile from source. follow the instructions within [this section](#how-to-contribute)
 
 ## Get Involved
 
