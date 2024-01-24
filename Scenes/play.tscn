@@ -1,11 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://gyn6ov73kxd2"]
+[gd_scene load_steps=11 format=3 uid="uid://gyn6ov73kxd2"]
 
 [ext_resource type="Script" path="res://Scripts/gamePlayLoop.gd" id="1_66qs4"]
 [ext_resource type="Script" path="res://Scripts/playerStatusBar.gd" id="1_dkdrk"]
 [ext_resource type="Texture2D" uid="uid://cw4pq165gdgdy" path="res://Assets/uh_53x53.png" id="1_mdiq6"]
 [ext_resource type="Texture2D" uid="uid://dhmknv1hynwn8" path="res://Assets/playerStatusBar.png" id="2_dvin5"]
 [ext_resource type="Texture2D" uid="uid://dv7u515vq3tdg" path="res://Assets/uh2_10x10.png" id="4_ssifm"]
-[ext_resource type="Texture2D" uid="uid://dqrr1hcdrw27o" path="res://Assets/uh3_unknown_size.png" id="6_ujgt7"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_erkx4"]
 bg_color = Color(0.94902, 0.407843, 0.286275, 1)
@@ -27,6 +26,16 @@ corner_radius_top_left = 8
 corner_radius_top_right = 8
 corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hra5d"]
+bg_color = Color(0.223529, 0.466667, 0.588235, 1)
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wcwqj"]
+bg_color = Color(0.34902, 0.639216, 0.784314, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
 
 [node name="Play" type="Node2D"]
 script = ExtResource("1_66qs4")
@@ -93,6 +102,11 @@ offset_bottom = 27.0
 bbcode_enabled = true
 text = "Übercharge"
 
+[node name="cbaToMofiyThePNG" type="Sprite2D" parent="playerStatusBar"]
+position = Vector2(315.443, -1.45239)
+scale = Vector2(8.29193, 64.7031)
+texture = ExtResource("4_ssifm")
+
 [node name="topTitleBarAsICantBeBotheredToModifyThePNG" type="Sprite2D" parent="playerStatusBar"]
 position = Vector2(467.25, -311)
 scale = Vector2(22.35, 2.4)
@@ -116,17 +130,12 @@ offset_bottom = 43.0
 bbcode_enabled = true
 text = "your level goes here, idk"
 
-[node name="cbaToMofiyThePNG" type="Sprite2D" parent="playerStatusBar"]
-position = Vector2(351.5, 262.978)
-scale = Vector2(15.9, 11.817)
-texture = ExtResource("4_ssifm")
-
 [node name="gameHolder" type="Node" parent="."]
 editor_description = "can't come up with a good name, sorry!"
 
 [node name="gameText" type="RichTextLabel" parent="gameHolder"]
 offset_left = 220.0
-offset_right = 930.0
+offset_right = 841.0
 offset_bottom = 540.0
 bbcode_enabled = true
 text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vehicula metus blandit tellus aliquam commodo. Sed semper maximus cursus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Nulla ultrices arcu nibh, eget egestas arcu posuere non. In condimentum orci a ipsum rutrum pulvinar. Ut diam lectus, imperdiet a auctor sed, suscipit vitae lorem. Suspendisse pulvinar libero in nulla sodales, in aliquet justo interdum. Vestibulum vulputate, erat sit amet gravida aliquam, nunc mi ultricies quam, in congue arcu turpis ut lectus. Integer augue eros, aliquam non mattis nec, congue in odio. Aenean quis purus vel orci hendrerit semper. Maecenas ullamcorper metus sed felis ultricies, ac bibendum augue suscipit.
@@ -264,37 +273,49 @@ disabled = true
 text = "1"
 
 [node name="targetStatusBar2" type="Sprite2D" parent="."]
-position = Vector2(574, 330.5)
+position = Vector2(573, 319)
 scale = Vector2(1, 1.02932)
 texture = ExtResource("2_dvin5")
 flip_h = true
 
 [node name="topTitleBarAsICantBeBotheredToModifyThePNG" type="Sprite2D" parent="targetStatusBar2"]
-position = Vector2(-465.25, -311)
+position = Vector2(-465.25, -300.313)
 scale = Vector2(21.65, 2.4)
 texture = ExtResource("4_ssifm")
 
 [node name="targetName" type="RichTextLabel" parent="targetStatusBar2"]
 offset_left = -574.0
-offset_top = -320.0
+offset_top = -314.171
 offset_right = -358.0
-offset_bottom = -280.0
+offset_bottom = -274.171
 theme_override_font_sizes/normal_font_size = 15
 bbcode_enabled = true
 text = "coolUsername - ???"
 
-[node name="hoverDescription" type="Sprite2D" parent="targetStatusBar2"]
-position = Vector2(-468, -195.517)
-scale = Vector2(2.26531, 2.75262)
-texture = ExtResource("6_ujgt7")
+[node name="targetSprite" type="Sprite2D" parent="targetStatusBar2"]
+position = Vector2(-471, -193.817)
+scale = Vector2(0.228336, 0.22021)
 
-[node name="tooltipThingy" type="RichTextLabel" parent="targetStatusBar2/hoverDescription"]
-offset_left = -47.0
-offset_top = -37.0
-offset_right = 49.0
-offset_bottom = 38.0
-tooltip_text = "aCoolTooltip"
+[node name="tooltipBox" type="Node" parent="targetStatusBar2"]
 
-[node name="targetSprite" type="Sprite2D" parent="targetStatusBar2/hoverDescription"]
-position = Vector2(-1.32432, 0.617492)
-scale = Vector2(0.100797, 0.08)
+[node name="tooltipDescription" type="RichTextLabel" parent="targetStatusBar2/tooltipBox"]
+custom_minimum_size = Vector2(199, 16)
+offset_left = 10.0
+offset_top = 262.0
+offset_right = 209.0
+offset_bottom = 278.0
+theme_override_font_sizes/normal_font_size = 10
+theme_override_styles/normal = SubResource("StyleBoxFlat_hra5d")
+text = "peenis"
+fit_content = true
+scroll_active = false
+
+[node name="tooltipTitle" type="RichTextLabel" parent="targetStatusBar2/tooltipBox"]
+offset_left = 9.5
+offset_top = 240.0
+offset_right = 208.5
+offset_bottom = 263.0
+theme_override_font_sizes/normal_font_size = 10
+theme_override_styles/normal = SubResource("StyleBoxFlat_wcwqj")
+bbcode_enabled = true
+text = "tooltip title"

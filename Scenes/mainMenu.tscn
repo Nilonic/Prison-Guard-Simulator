@@ -1,8 +1,16 @@
-[gd_scene load_steps=4 format=3 uid="uid://bkdpsldl2t366"]
+[gd_scene load_steps=5 format=3 uid="uid://bkdpsldl2t366"]
 
 [ext_resource type="Script" path="res://Scripts/mainMenu.gd" id="1_1idac"]
 [ext_resource type="Texture2D" uid="uid://dgbtvny2e4gi3" path="res://Assets/black_32x32.png" id="2_6trit"]
 [ext_resource type="Texture2D" uid="uid://cw4pq165gdgdy" path="res://Assets/uh_53x53.png" id="2_t0vn7"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_oy36h"]
+bg_color = Color(0.988235, 0.352941, 0.329412, 1)
+corner_radius_top_left = 38
+corner_radius_top_right = 38
+corner_radius_bottom_right = 38
+corner_radius_bottom_left = 38
+corner_detail = 20
 
 [node name="MainMenu" type="Node2D"]
 editor_description = "the main menu node"
@@ -50,19 +58,32 @@ offset_bottom = 651.0
 theme_override_font_sizes/normal_font_size = 23
 text = "lorem ipsum. update avalable/up to date"
 
-[node name="RichTextLabel" type="RichTextLabel" parent="BackgroundDrawer"]
+[node name="madeByText" type="RichTextLabel" parent="BackgroundDrawer"]
 offset_left = 814.0
 offset_right = 1152.0
 offset_bottom = 40.0
 text = "made by nilonic: https://nilonic.itch.io/pgs"
 
-[node name="RichTextLabel2" type="RichTextLabel" parent="BackgroundDrawer"]
-offset_top = 40.0
-offset_right = 1150.0
-offset_bottom = 123.0
-text = "an Erotic Text-based game, based off of Broken Dreams Correctional Center, about being a prison guard in a space station prison
+[node name="backgroundForWarning" type="ProgressBar" parent="BackgroundDrawer"]
+offset_left = 32.0
+offset_top = 111.0
+offset_right = 1118.0
+offset_bottom = 161.0
+theme_override_styles/fill = SubResource("StyleBoxFlat_oy36h")
+min_value = 1.0
+max_value = 1.0
+value = 1.0
+fill_mode = 2
+show_percentage = false
 
-NOTE: this game, whilst still in beta, contains a lot of suggestive themes, and is meant to be played by ADULTS ONLY. you have been warned"
+[node name="theWarningAndTitleText" type="RichTextLabel" parent="BackgroundDrawer"]
+offset_top = 78.0
+offset_right = 1150.0
+offset_bottom = 161.0
+bbcode_enabled = true
+text = "[center]An Erotic Text-based game, based off of Broken Dreams Correctional Center, about being a prison guard in a space station prison
+
+[color=red]NOTE: this game, whilst still in beta, contains a lot of suggestive themes, and is meant to be played by ADULTS ONLY. you have been warned[/color][/center]"
 
 [node name="Options" type="CanvasGroup" parent="."]
 visible = false

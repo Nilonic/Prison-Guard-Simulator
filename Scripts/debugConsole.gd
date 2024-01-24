@@ -28,7 +28,11 @@ func on_enter_pressed():
 help - show help
 show_scene <scene-ID> - change to a scene ID
 load_scene <scene-ID> - mirror of show_scene
-print_scene - print all scene Ids and their respective file paths"""
+print_scene - print all scene Ids and their respective file paths
+set-health <value> - set hp to value, cannot go over max or under min
+set-lust <value> - set lust to value, cannot go over max or under min
+set-armour <value> - set armour to value, cannot go over max or under min
+set-xp <value> - set your XP to value"""
 		"print_scene":
 				console.text += "\nScene ID=1 -> Main Menu (res://Scenes/mainMenu.tscn)\nScene ID=2 -> Play (res://Scenes/play.tscn)\nScene ID=3 -> this scene (res://Scenes/debugConsole.tscn)"
 				commandBar.text = ""
@@ -39,6 +43,13 @@ print_scene - print all scene Ids and their respective file paths"""
 				console.text += "\nloading scene " + str(scene_id)
 				commandBar.text = ""
 				loadScene(scene_id)
+			else:
+				console.text += "\nmissing argument(s)"
+				commandBar.text = ""
+		"set-health":
+			if text.size() > 1:
+				print("asdf")
+				commandBar.text = ""
 			else:
 				console.text += "\nmissing argument(s)"
 				commandBar.text = ""

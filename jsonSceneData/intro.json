@@ -6,30 +6,53 @@
 	},
 	"textBlock": {
 		"1": {
-			"text": "[b]you wake up[/b] in a strange room with a weird, yet sweet smell. everything's fuzzy. On second glance, it's a meeting room, and your [b]right hand[/b] is [b]handcuffed to the chair[/b] you're sat on.\n\nacross from you is nilon, a [b]protogen[/b] with grey fur, and a single eye. nilon is wearing a reddish brown uniform, with a badge that says \"station commander\". nilon seems to be daydreaming. what is going on here?\n\nyou jump when his eye suddenly locks onto you. seriously, what the hell is going on here?",
+			"text": "[b]you wake up[/b] in a strange room with a weird, yet sweet smell. everything's fuzzy. On second glance, it's a meeting room, and your [b]right hand[/b] is [b]handcuffed to the chair[/b] you're sat on.\n\nacross from you is nilon, a [b]protogen[/b] with grey fur, and a single eye. nilon is wearing a reddish brown uniform, with a badge that says \"station commander\". nilon seems to be daydreaming. what is going on here?",
 			"buttonArray": {
 				"1": {
 					"text": "Ask what's going on",
-					"tooltip": "ok... this is wierd",
+					"tooltip": "Ok... this is wierd",
 					"type": 1,
 				},
 			},
 		},
 		"2": {
 			"text": "[color=#789]You: \"Uhh... where am i? What is this place\"[/color]
+Nilon's eye snaps to you, causing your heart to start racing
 [color=lightblue]Nilon: \"Ah, you're finally awake. It seems that the sedatives had a unexpected outcome on you. noted\"[/color]
-[color=#789]You: \"The hell you mean 'unexpected', why did you drug me?!\"[/color]
+[color=#789]You: \"The hell you mean 'unexpected', why the fuck did you drug me?!\"[/color]
 Nilon sighed, before continuing
 [color=lightblue]Nilon: \"Look, it's all what the higher ups call 'standard procedure'. something about 'violent tendancies', however it seems as if your body didn't like the sedatives. if i had it my way, we wouldn't need to do this, but we do\"[/color]
 Nilon gestures to the handcuffs
-[color=lightblue]Nilon: \"Oh, and by the way, those handcuffs aren't actually locked, i couldn't be bothered to lock them\"",
+[color=lightblue]Nilon: \"Oh, and by the way, those handcuffs aren't actually that secure, they're the oldest ones i had on hand, so they're easy to break\"",
 			"buttonArray": {
 				"1": {
 					"text": "Ok...",
-					"tooltip": "whoever this guy is, he's either a psycho or cool",
+					"tooltip": "Whoever this guy is, he's either a psycho or cool",
 					"type": 1,
 				},
 			},
+		},
+		"3": {
+			"text": "[i]You yank on the handcuffs, and they just snap. huh, guess he does have some merit[/i]
+[color=lightblue]Nilon: \"Now, i am to inform you that you have been selected for a permanant station here, on the NDS. And don't tell my boss about this, but i'll spill the beans on why we had to sedate you\"[/color]
+[color=#789]You: \"Go on then...\"[/color]
+Nilon takes a long, deep breath. You can feel your heart pounding in your chest.
+[color=lightblue]Nilon: \"You were forcefully taken from your outpost, back on [i]zeta prime[/i], you can't remember shit because of the brain wipe they did on you\"[/color]
+Well, that was a bit dramatic...
+[color=#789]You: \"But why though? Why kidnap me of all people\"[/color]
+[color=lightblue]Nilon: \"You had potential, or at least, they saw potential. Whether you have potential or not is none of my business\"[/color]
+Nilon pulls out a sheet of paper and a pen, and slides it to you
+[color=lightblue]Nilon: \"Now, i just need you to fill out a form. general stuff, just your species, your name, and whether you have a [b]pole[/b], or a [color=pink][b]hole[/b][color=lightblue]\"[/color]
+[color=#789]You: \"Why not use a holo-tablet?\"[/color]
+[color=lightblue]Nilon: \"Because the last one got stolen. just fill out the form\"[/color]
+",
+			"buttonArray": {
+				"1":{
+					"text": "Begin the form",
+					"tooltip": "Guess i have no choice",
+					"type": 4
+				}
+			}
 		}
 	},
 }

@@ -27,7 +27,8 @@ func _ready():
 				json.parse(json_string)
 				# set stuff up
 				globalFunctions.find_node_by_name(get_tree().get_root(), "targetName").text = json.data["data"]["character"]
-				globalFunctions.find_node_by_name(get_tree().get_root(), "tooltipThingy").tooltip_text = json.data["data"]["descriptor"]
+				globalFunctions.find_node_by_name(get_tree().get_root(), "tooltipTitle").text = "[center]" + json.data["data"]["character"]
+				globalFunctions.find_node_by_name(get_tree().get_root(), "tooltipDescription").text = "[center]" + json.data["data"]["descriptor"]
 				globalFunctions.find_node_by_name(get_tree().get_root(), "gameText").text = json.data["textBlock"][str(current_block)]["text"]
 				set_char_sprite(json.data["data"]["characterSpritePath"])
 				
@@ -69,10 +70,19 @@ func _setup_buttons(jsonData: Dictionary) -> void:
 			print("Button node not found: ", buttonName)
 
 func _clear_buttons() -> void:
-	for button in range(1, 13):
+	for button in range(1, 13): # mfw not inclusive
 		globalFunctions.find_node_by_name(get_tree().get_root(), str(button)).text = ""
 		globalFunctions.find_node_by_name(get_tree().get_root(), str(button)).tooltip_text = ""
-		globalFunctions.find_node_by_name(get_tree().get_root(), str(button)).disconnect("pressed", _to_next_text_block)
+		globalFunctions.find_node_by_name(get_tree().get_root(), str(button)).disabled = true
+		# Disconnect the "pressed" signal from any connected callables
+		var signal_name = "pressed"
+		# Get all connections to the signal
+		var connections = globalFunctions.find_node_by_name(get_tree().get_root(), str(button)).get_signal_connection_list(signal_name)
+		# Disconnect each connection
+		for connection in connections:
+			print(connection)
+			globalFunctions.find_node_by_name(get_tree().get_root(), str(button)).disconnect(signal_name, connection["callable"])
+
 
 func set_char_sprite(spriteName):
 	var texture_path = spriteName + "/char.png"
@@ -89,6 +99,20 @@ func set_char_sprite(spriteName):
 
 func _to_next_text_block():
 	_clear_buttons()
-	_setup_buttons(json.data["textBlock"][str(current_block+1)]["buttonArray"])
-	globalFunctions.find_node_by_name(get_tree().get_root(), "gameText").text = json.data["textBlock"][str(current_block+1)]["text"]
-	current_block += 1
+
+	var next_block_str = str(current_block + 1)
+
+	if json.data["textBlock"].has(next_block_str):
+		if json.data["textBlock"][next_block_str].has("buttonArray") and json.data["textBlock"][next_block_str].has("text"):
+			_setup_buttons(json.data["textBlock"][next_block_str]["buttonArray"])
+			globalFunctions.find_node_by_name(get_tree().get_root(), "gameText").text = json.data["textBlock"][next_block_str]["text"]
+			current_block += 1
+		else:
+			globalFunctions.find_node_by_name(get_tree().get_root(), "gameText").text = "JSON Parse Error: \"" + next_block_str + "\" from key \"textBlock\" was not found, or is malformed, in JSON file
+make sure that the button type is correct, and you have all required keys. visit https://github.com/Nilonic/Prison-Guard-Simulator/wiki/ for the schema"
+	else:
+		globalFunctions.find_node_by_name(get_tree().get_root(), "gameText").text = "JSON Parse Error: \"" + next_block_str + "\" from key \"textBlock\" was not found, or is malformed, in JSON file
+make sure that the button type is correct, and you have all required keys. visit https://github.com/Nilonic/Prison-Guard-Simulator/wiki/ for the schema
+"
+		print("No data found for block", next_block_str)
+
