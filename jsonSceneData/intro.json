@@ -1,14 +1,35 @@
 {
 	"data":{
-		"character": "Nilon",
+		"character": "[color=lightblue]Nilon",
 		"descriptor": "The only protogen you'll ever see in this game\nHe has light grey fur, and one eye because he refuses to get it fixed.",
-		"characterSpritePath": "res://characterStuff/headShot/nilon",
+		"characterSpritePath": "res://characterStuff/nilon",
 	},
-	"buttonArray": {
+	"textBlock": {
 		"1": {
-			"text": "Continue",
-			"tooltip": "Continue",
-			"type": 1,
+			"text": "[b]you wake up[/b] in a strange room with a weird, yet sweet smell. everything's fuzzy. On second glance, it's a meeting room, and your [b]right hand[/b] is [b]handcuffed to the chair[/b] you're sat on.\n\nacross from you is nilon, a [b]protogen[/b] with grey fur, and a single eye. nilon is wearing a reddish brown uniform, with a badge that says \"station commander\". nilon seems to be daydreaming. what is going on here?\n\nyou jump when his eye suddenly locks onto you. seriously, what the hell is going on here?",
+			"buttonArray": {
+				"1": {
+					"text": "Ask what's going on",
+					"tooltip": "ok... this is wierd",
+					"type": 1,
+				},
 			},
-	}
+		},
+		"2": {
+			"text": "[color=#789]You: \"Uhh... where am i? What is this place\"[/color]
+[color=lightblue]Nilon: \"Ah, you're finally awake. It seems that the sedatives had a unexpected outcome on you. noted\"[/color]
+[color=#789]You: \"The hell you mean 'unexpected', why did you drug me?!\"[/color]
+Nilon sighed, before continuing
+[color=lightblue]Nilon: \"Look, it's all what the higher ups call 'standard procedure'. something about 'violent tendancies', however it seems as if your body didn't like the sedatives. if i had it my way, we wouldn't need to do this, but we do\"[/color]
+Nilon gestures to the handcuffs
+[color=lightblue]Nilon: \"Oh, and by the way, those handcuffs aren't actually locked, i couldn't be bothered to lock them\"",
+			"buttonArray": {
+				"1": {
+					"text": "Ok...",
+					"tooltip": "whoever this guy is, he's either a psycho or cool",
+					"type": 1,
+				},
+			},
+		}
+	},
 }
