@@ -1,4 +1,4 @@
-# Prison Guard Simulator README
+# Prison Guard Simulator - an Erotic Text-based game, based off "Broken Dreams Correctional Center"
 
 ## Overview
 
@@ -9,7 +9,7 @@ Welcome to Prison Guard Simulator, an engaging and text-based "game". Immerse yo
 In Prison Guard Simulator, you take on the role of a prison guard at **nondescript prison**. Navigate through the challenges of maintaining order, interacting with inmates, and making crucial decisions that shape the course of the game.
 
 ## Credits
-**[Nilonic:](https://github.com/Nilonic/)** Art, Programming
+**[Nilonic:](https://github.com/Nilonic/)** Art, Programming, Storywriting
 <!--feel free to add yourself when you make a contribution-->
 
 ## Technical Details
