@@ -23,6 +23,7 @@ func _ready():
 				print(json.data["data"]["character"])
 				globalFunctions.find_node_by_name(get_tree().get_root(), "targetName").text = json.data["data"]["character"]
 				globalFunctions.find_node_by_name(get_tree().get_root(), "tooltipThingy").tooltip_text = json.data["data"]["descriptor"]
+
 				_setupButtons(json.data["buttonArray"])
 			else:
 				print("Failed to open the file.")
@@ -32,7 +33,6 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	globalFunctions.find_node_by_name(get_tree().get_root(), "armourBar").value += 1
 	pass
 	
 	
@@ -53,6 +53,6 @@ func _setupButtons(jsonData: Dictionary) -> void:
 				buttonNode.tooltip_text = buttonData["tooltip"]
 			if "type" in buttonData:
 				buttonTypeArray.append(buttonData["type"])
-			else:
-				print("Button node not found: ", buttonName)
+		else:
+			print("Button node not found: ", buttonName)
 

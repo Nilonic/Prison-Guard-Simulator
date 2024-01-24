@@ -1,3 +1,14 @@
 {
-	"buttons": []
+	"data":{
+		"character": "Nilon",
+		"descriptor": "The only protogen you'll ever see in this game\nHe has light grey fur, and one eye because he refuses to get it fixed.",
+		"characterSpritePath": "res://characterStuff/headShot/nilon",
+	},
+	"buttonArray": {
+		"1": {
+			"text": "Continue",
+			"tooltip": "Continue",
+			"type": 1,
+			},
+	}
 }
