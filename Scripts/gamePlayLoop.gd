@@ -40,7 +40,7 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _process(_delta):
 	pass
 	
 	
@@ -63,6 +63,9 @@ func _setup_buttons(jsonData: Dictionary) -> void:
 				match int(buttonData["type"]):
 					1:
 						buttonNode.connect("pressed", _to_next_text_block)
+						buttonNode.disabled = false
+					2:
+						buttonNode.connect("pressed", _to_char_creator)
 						buttonNode.disabled = false
 					_, 0: # default case, or if type is zero
 						buttonNode.disabled = true
@@ -116,3 +119,13 @@ make sure that the button type is correct, and you have all required keys. visit
 "
 		print("No data found for block", next_block_str)
 
+func _to_char_creator():
+	_clear_buttons()
+	#name entry node
+	globalFunctions.find_node_by_name(get_tree().get_root(), "gameText").text = "\n\nEnter your name:"
+	var tentry: TextEdit = TextEdit.new()
+	tentry.custom_minimum_size = Vector2(200, 40)
+	tentry.position = Vector2(240, 80)
+	add_child(tentry)
+	# sorry future developer (whether it's me or someone else i don't know)
+	_setup_buttons({"1":{ "text": "Submit", "type": 3}}) #type 3 is submit, REMEMBER THIS NILON!

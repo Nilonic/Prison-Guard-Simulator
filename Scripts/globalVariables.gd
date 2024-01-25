@@ -5,10 +5,9 @@ var lust: int = 0
 var armour: int = 0
 var xp: int = 0
 var _xpPerLevel = 400
+var playerName = "player"
 
 var currentQuestID: int = 0
-
-var questLookupTable: Array = ["intro"]
 
 func _ready():
 	print("initialized res://Scripts/globalVariables.gd as \"autoload_script\"")

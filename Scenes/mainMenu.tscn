@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://bkdpsldl2t366"]
+[gd_scene load_steps=6 format=3 uid="uid://bkdpsldl2t366"]
 
 [ext_resource type="Script" path="res://Scripts/mainMenu.gd" id="1_1idac"]
 [ext_resource type="Texture2D" uid="uid://dgbtvny2e4gi3" path="res://Assets/black_32x32.png" id="2_6trit"]
@@ -11,6 +11,9 @@ corner_radius_top_right = 38
 corner_radius_bottom_right = 38
 corner_radius_bottom_left = 38
 corner_detail = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3nqct"]
+bg_color = Color(0, 0, 0, 0.294118)
 
 [node name="MainMenu" type="Node2D"]
 editor_description = "the main menu node"
@@ -255,3 +258,10 @@ offset_right = 127.0
 offset_bottom = 407.0
 tooltip_text = "Exit the game"
 text = "Exit"
+
+[node name="fpsCounter" type="Label" parent="."]
+offset_top = 39.0
+offset_right = 84.0
+offset_bottom = 65.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_3nqct")
+text = "FPS: ?"

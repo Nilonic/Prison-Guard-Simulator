@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://gyn6ov73kxd2"]
+[gd_scene load_steps=12 format=3 uid="uid://gyn6ov73kxd2"]
 
 [ext_resource type="Script" path="res://Scripts/gamePlayLoop.gd" id="1_66qs4"]
 [ext_resource type="Script" path="res://Scripts/playerStatusBar.gd" id="1_dkdrk"]
@@ -36,6 +36,9 @@ corner_radius_bottom_left = 4
 bg_color = Color(0.34902, 0.639216, 0.784314, 1)
 corner_radius_top_left = 8
 corner_radius_top_right = 8
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fyee5"]
+bg_color = Color(0, 0, 0, 0.294118)
 
 [node name="Play" type="Node2D"]
 script = ExtResource("1_66qs4")
@@ -320,3 +323,11 @@ theme_override_font_sizes/normal_font_size = 10
 theme_override_styles/normal = SubResource("StyleBoxFlat_wcwqj")
 bbcode_enabled = true
 text = "tooltip title"
+
+[node name="fpsCounter" type="Label" parent="."]
+offset_left = 855.0
+offset_right = 937.0
+offset_bottom = 17.0
+theme_override_font_sizes/font_size = 12
+theme_override_styles/normal = SubResource("StyleBoxFlat_fyee5")
+text = "FPS: ?"

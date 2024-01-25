@@ -20,6 +20,7 @@ config/icon="res://icon.svg"
 
 GlobalVariables="*res://Scripts/globalVariables.gd"
 globalFunctions="*res://Scripts/globalFunctions.gd"
+FpsCounterControler="*res://Scripts/fpsCounterControler.gd"
 
 [display]
 
@@ -33,6 +34,7 @@ version_control/autoload_on_startup=true
 [filesystem]
 
 import/blender/enabled=false
+import/fbx/enabled=false
 
 [rendering]
 
