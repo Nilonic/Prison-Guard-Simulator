@@ -6,6 +6,7 @@ var armour: int = 0
 var xp: int = 0
 var _xpPerLevel = 400
 var playerName = "player"
+var playerGender: bool = false # false for male, true for female
 
 var currentQuestID: int = 0
 

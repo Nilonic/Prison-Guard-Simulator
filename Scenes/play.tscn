@@ -331,3 +331,9 @@ offset_bottom = 17.0
 theme_override_font_sizes/font_size = 12
 theme_override_styles/normal = SubResource("StyleBoxFlat_fyee5")
 text = "FPS: ?"
+
+[node name="OptionButton" type="OptionButton" parent="."]
+offset_left = 60.0
+offset_top = 76.0
+offset_right = 105.0
+offset_bottom = 96.0

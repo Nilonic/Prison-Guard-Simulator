@@ -67,6 +67,12 @@ func _setup_buttons(jsonData: Dictionary) -> void:
 					2:
 						buttonNode.connect("pressed", _to_char_creator)
 						buttonNode.disabled = false
+					3: # submit name
+						buttonNode.connect("pressed", _save_name)
+						buttonNode.disabled = false
+					4: # submit gender
+						buttonNode.connect("pressed", _save_gender)
+						buttonNode.disabled = false
 					_, 0: # default case, or if type is zero
 						buttonNode.disabled = true
 		else:
@@ -123,9 +129,41 @@ func _to_char_creator():
 	_clear_buttons()
 	#name entry node
 	globalFunctions.find_node_by_name(get_tree().get_root(), "gameText").text = "\n\nEnter your name:"
-	var tentry: TextEdit = TextEdit.new()
+	var tentry: LineEdit = LineEdit.new()
 	tentry.custom_minimum_size = Vector2(200, 40)
+	tentry.name = "name_entry"
 	tentry.position = Vector2(240, 80)
+	tentry.max_length = 13
+	tentry.placeholder_text = "name here (MAX 13)"
+	tentry.text = "Player"
 	add_child(tentry)
 	# sorry future developer (whether it's me or someone else i don't know)
-	_setup_buttons({"1":{ "text": "Submit", "type": 3}}) #type 3 is submit, REMEMBER THIS NILON!
+	_setup_buttons({"1":{ "text": "Submit", "type": 3}})
+
+
+func _save_name(): # done =)
+	if globalFunctions.find_node_by_name(get_tree().get_root(), "name_entry").text.strip_edges().to_lower() == "":
+		print("ERR: Name cannot be empty")
+	elif globalFunctions.find_node_by_name(get_tree().get_root(), "name_entry").text.strip_edges().to_lower() == "nilon":
+		print("haha, very funny, but no")
+	else:
+		print("name:", globalFunctions.find_node_by_name(get_tree().get_root(), "name_entry").text)
+		GlobalVariables.name = globalFunctions.find_node_by_name(get_tree().get_root(), "name_entry").text
+		remove_child(globalFunctions.find_node_by_name(get_tree().get_root(), "name_entry"))
+		_clear_buttons()
+		globalFunctions.find_node_by_name(get_tree().get_root(), "gameText").text = "\n\nselect gender:"
+		var tentry: OptionButton = OptionButton.new()
+		tentry.name = "gender_bender"
+		tentry.add_item("Male", 0); tentry.add_item("Female", 1)
+		tentry.custom_minimum_size = Vector2(200, 40)
+		tentry.position = Vector2(240, 80)
+		tentry.select(0)
+		add_child(tentry)
+		_setup_buttons({"1":{ "text": "Submit", "type": 4}})
+		
+func _save_gender():
+	print(globalFunctions.find_node_by_name(get_tree().get_root(), "gender_bender").get_selected_id()) # 0 = false, 1 = true
+	if globalFunctions.find_node_by_name(get_tree().get_root(), "gender_bender").get_selected_id() == 0:
+		pass
+	else:
+		GlobalVariables.playerGender = true
