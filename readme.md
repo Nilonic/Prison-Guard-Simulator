@@ -10,6 +10,7 @@ In Prison Guard Simulator, you take on the role of a prison guard at **nondescri
 
 ## Credits
 **[Nilonic:](https://github.com/Nilonic/)** Art, Programming, Storywriting
+<!--i'll be commitioning some artists soon! exciting times!-->
 <!--feel free to add yourself when you make a contribution-->
 
 ## Technical Details
