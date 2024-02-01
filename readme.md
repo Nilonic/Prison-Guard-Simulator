@@ -9,9 +9,14 @@ Welcome to Prison Guard Simulator, an engaging and text-based "game". Immerse yo
 In Prison Guard Simulator, you take on the role of a prison guard at **nondescript prison**. Navigate through the challenges of maintaining order, interacting with inmates, and making crucial decisions that shape the course of the game.
 
 ## Credits
-**[Nilonic:](https://github.com/Nilonic/)** Art, Programming, Storywriting
-<!--i'll be commitioning some artists soon! exciting times!-->
+**[Nilonic:](https://github.com/Nilonic/)** ~~Art~~, Programming, Storywriting
 <!--feel free to add yourself when you make a contribution-->
+
+## Paid for from Etsy
+**[SnazzySpectral:](https://www.etsy.com/uk/shop/SnazzySpectral)** Base for character art (banging price as well, £4.34 for it)
+**[Nekotiating:](https://www.etsy.com/uk/shop/Nekotiating)** Base for my icon (absolute steal of a price, £0.82 for it)
+
+(yes prices are in GBP, and yes i am a brit. sorry!) <!--if y'all wanna convert this to specific prices in certain countries, feel free-->
 
 ## Technical Details
 
